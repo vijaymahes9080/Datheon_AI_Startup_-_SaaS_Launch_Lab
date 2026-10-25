@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="boxShadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <style>
+    .header-title { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: 800; font-size: 26px; fill: #0F172A; }
+    .header-sub { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: 500; font-size: 15px; fill: #64748B; }
+    .step-title { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: 700; font-size: 15px; fill: #0F172A; }
+    .step-desc { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: 400; font-size: 12px; fill: #475569; line-height: 1.4; }
+    .step-num { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: 800; font-size: 12px; fill: #059669; }
+    .code-pill { font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px; fill: #047857; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="520" fill="url(#bgGrad2)"/>
+  <rect x="25" y="20" width="1150" height="480" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#boxShadow)"/>
+
+  <!-- Title Section -->
+  <text x="60" y="65" class="header-title">DealForge AI — System Architecture &amp; Data Pipeline</text>
+  <text x="60" y="90" class="header-sub">High-speed, zero-retention proposal risk audit and amendment synthesis workflow.</text>
+
+  <!-- Connector Line Flow -->
+  <line x1="165" y1="210" x2="335" y2="210" stroke="#059669" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+  <line x1="485" y1="210" x2="655" y2="210" stroke="#059669" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+  <line x1="805" y1="210" x2="975" y2="210" stroke="#059669" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+
+  <!-- STEP 1: Input -->
+  <g transform="translate(60, 125)">
+    <rect width="210" height="230" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="15" y="15" width="30" height="30" rx="6" fill="#ECFDF5"/>
+    <text x="24" y="35" class="step-num">01</text>
+    <text x="55" y="35" class="step-title">Proposal Input</text>
+    <text x="15" y="70" class="step-desc">
+      <tspan x="15" dy="0">• Paste draft SOW text</tspan>
+      <tspan x="15" dy="20">• Input total deal value ($)</tspan>
+      <tspan x="15" dy="20">• Billing model (Fixed/Hybrid)</tspan>
+      <tspan x="15" dy="20">• Pre-loaded sample SOWs</tspan>
+    </text>
+    <rect x="15" y="175" width="180" height="38" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="25" y="198" class="code-pill">POST /api/proposals/audit</text>
+  </g>
+
+  <!-- STEP 2: Preprocessor & Scrubber -->
+  <g transform="translate(350, 125)">
+    <rect width="210" height="230" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="15" y="15" width="30" height="30" rx="6" fill="#ECFDF5"/>
+    <text x="24" y="35" class="step-num">02</text>
+    <text x="55" y="35" class="step-title">Zero-PII Scrubber</text>
+    <text x="15" y="70" class="step-desc">
+      <tspan x="15" dy="0">• Client entity anonymization</tspan>
+      <tspan x="15" dy="20">• Strips confidential rates</tspan>
+      <tspan x="15" dy="20">• RFC-compliant validation</tspan>
+      <tspan x="15" dy="20">• Zero public model training</tspan>
+    </text>
+    <rect x="15" y="175" width="180" height="38" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="25" y="198" class="code-pill">src/services/authService.js</text>
+  </g>
+
+  <!-- STEP 3: Core Risk Engine -->
+  <g transform="translate(640, 125)">
+    <rect width="210" height="230" rx="12" fill="#F0FDF4" stroke="#86EFAC" stroke-width="2"/>
+    <rect x="15" y="15" width="30" height="30" rx="6" fill="#10B981"/>
+    <text x="24" y="35" font-family="sans-serif" font-weight="800" font-size="12" fill="#FFFFFF">03</text>
+    <text x="55" y="35" class="step-title" fill="#047857">50-Point Risk Engine</text>
+    <text x="15" y="70" class="step-desc">
+      <tspan x="15" dy="0">• Subjective approval check</tspan>
+      <tspan x="15" dy="20">• Uncapped revisions trap</tspan>
+      <tspan x="15" dy="20">• Cash flow delay (Net 60)</tspan>
+      <tspan x="15" dy="20">• Uncapped liability clauses</tspan>
+    </text>
+    <rect x="15" y="175" width="180" height="38" rx="6" fill="#FFFFFF" stroke="#86EFAC"/>
+    <text x="25" y="198" class="code-pill">src/services/auditEngine.js</text>
+  </g>
+
+  <!-- STEP 4: Output & Resolution -->
+  <g transform="translate(930, 125)">
+    <rect width="210" height="230" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="15" y="15" width="30" height="30" rx="6" fill="#ECFDF5"/>
+    <text x="24" y="35" class="step-num">04</text>
+    <text x="55" y="35" class="step-title">Protective Resolution</text>
+    <text x="15" y="70" class="step-desc">
+      <tspan x="15" dy="0">• Risk Score Gauge (0–100)</tspan>
+      <tspan x="15" dy="20">• Dollar-at-Risk exposure ($)</tspan>
+      <tspan x="15" dy="20">• Drop-in deemed acceptance</tspan>
+      <tspan x="15" dy="20">• One-click clause clipboard</tspan>
+    </text>
+    <rect x="15" y="175" width="180" height="38" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="25" y="198" class="code-pill">public/js/app.js (UI Render)</text>
+  </g>
+
+  <!-- Bottom Infrastructure & Security Banner -->
+  <g transform="translate(60, 380)">
+    <rect width="1080" height="90" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="25" y="32" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="14" fill="#0F172A">Enterprise Infrastructure &amp; Security Layer:</text>
+    <text x="25" y="60" font-family="'Segoe UI', sans-serif" font-weight="400" font-size="13" fill="#475569">
+      • Node.js v24 Native ESM Runtime  • PBKDF2 Password Hashing &amp; HMAC-SHA256 Signed Sessions  • Stripe Test Mode Checkout with Cryptographic Webhook Signatures (v1 HMAC)
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EDF2F7"/>
+    </linearGradient>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: 800; fill: #0F172A; }
+    .subtitle { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: 500; fill: #475569; }
+    .badge-text { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.05em; }
+    .pill-text { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: 600; font-size: 13px; fill: #1E293B; }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="420" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Technical Grid Lines -->
+  <g stroke="#E2E8F0" stroke-width="1" opacity="0.6">
+    <line x1="0" y1="70" x2="1200" y2="70"/>
+    <line x1="0" y1="140" x2="1200" y2="140"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="280" x2="1200" y2="280"/>
+    <line x1="0" y1="350" x2="1200" y2="350"/>
+    <line x1="200" y1="0" x2="200" y2="420"/>
+    <line x1="400" y1="0" x2="400" y2="420"/>
+    <line x1="600" y1="0" x2="600" y2="420"/>
+    <line x1="800" y1="0" x2="800" y2="420"/>
+    <line x1="1000" y1="0" x2="1000" y2="420"/>
+  </g>
+
+  <!-- Ambient Radiant Glows -->
+  <circle cx="1050" cy="80" r="220" fill="#10B981" opacity="0.08"/>
+  <circle cx="150" cy="340" r="180" fill="#3B82F6" opacity="0.06"/>
+
+  <!-- Main Card Container -->
+  <rect x="50" y="40" width="1100" height="340" rx="20" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#cardShadow)"/>
+
+  <!-- Brand Icon -->
+  <rect x="90" y="80" width="56" height="56" rx="14" fill="url(#brandGrad)"/>
+  <path d="M118 93 L106 111 L117 111 L115 125 L129 107 L118 107 Z" fill="#FFFFFF"/>
+
+  <!-- Top Category Eyebrow Badge (Properly Padded) -->
+  <rect x="160" y="86" width="410" height="30" rx="15" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="175" y="106" class="badge-text" fill="#047857">⚡ AI PROPOSAL RISK SCANNER • MARGIN PROTECTION</text>
+
+  <!-- Live Status Badge Right -->
+  <rect x="930" y="86" width="170" height="30" rx="15" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
+  <circle cx="948" cy="101" r="5" fill="#10B981"/>
+  <text x="962" y="106" class="badge-text" fill="#15803D">VERIFIED LAUNCH</text>
+
+  <!-- Hero Headline -->
+  <text x="90" y="185" class="title" font-size="38" letter-spacing="-0.02em">
+    Audit Agency Proposals in 60 Seconds.
+  </text>
+  <text x="90" y="230" class="title" font-size="38" fill="#059669" letter-spacing="-0.02em">
+    Eliminate Scope Creep &amp; Protect 40%+ Margins.
+  </text>
+
+  <!-- Subheadline -->
+  <text x="90" y="275" class="subtitle" font-size="17">
+    Pre-contract risk intelligence for digital studios &amp; IT consultancies. Automatically convert subjective approval traps
+  </text>
+  <text x="90" y="298" class="subtitle" font-size="17">
+    into objective 5-day deemed acceptance clauses before client signature.
+  </text>
+
+  <!-- Feature Pill Tags -->
+  <g transform="translate(90, 325)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="220" height="34" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="14" y="22" class="pill-text">⚡ 50-Point Heuristic Scan</text>
+    
+    <!-- Pill 2 -->
+    <rect x="235" y="0" width="235" height="34" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="249" y="22" class="pill-text">💵 Dollar-at-Risk Margin Calc</text>
+
+    <!-- Pill 3 -->
+    <rect x="485" y="0" width="245" height="34" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="499" y="22" class="pill-text">🛡️ Watertight Clause Generator</text>
+
+    <!-- Pill 4 -->
+    <rect x="745" y="0" width="210" height="34" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="759" y="22" class="pill-text">🔒 Zero PII Retention Policy</text>
+  </g>
+</svg>
