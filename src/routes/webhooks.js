@@ -46,7 +46,14 @@ export function verifyStripeSignature(rawPayload, sigHeader, secret = STRIPE_WEB
     .update(signedPayload)
     .digest('hex');
 
-  return crypto.timingSafeEqual(Buffer.from(signature, 'hex'), Buffer.from(expectedSig, 'hex'));
+  const sigBuf = Buffer.from(signature, 'hex');
+  const expectedBuf = Buffer.from(expectedSig, 'hex');
+
+  if (sigBuf.length !== expectedBuf.length) {
+    return false;
+  }
+
+  return crypto.timingSafeEqual(sigBuf, expectedBuf);
 }
 
 /**

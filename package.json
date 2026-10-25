@@ -18,5 +18,8 @@
     "co-star"
   ],
   "author": "DealForge Team",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
 }
