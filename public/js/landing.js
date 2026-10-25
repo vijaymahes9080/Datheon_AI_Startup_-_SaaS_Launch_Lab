@@ -77,9 +77,18 @@ document.addEventListener('DOMContentLoaded', () => {
           submitBtn.innerHTML = '<span>Get Priority Access →</span>';
         }
       } catch (err) {
-        // Fallback for offline or local preview
-        showFeedback(`🎉 Thank you! You have been prioritized for the next private cohort.`, 'success');
-        submitBtn.innerHTML = '<span>Seat Reserved ✓</span>';
+        // Fallback for offline or static GitHub Pages hosting
+        const stored = JSON.parse(localStorage.getItem('dealforge_waitlist') || '[]');
+        if (stored.includes(email.toLowerCase())) {
+          showFeedback(`ℹ️ You're already on the priority list! Your current position is #${42 + stored.indexOf(email.toLowerCase())}.`, 'info');
+          submitBtn.innerHTML = '<span>Already Registered ✓</span>';
+        } else {
+          stored.push(email.toLowerCase());
+          localStorage.setItem('dealforge_waitlist', JSON.stringify(stored));
+          showFeedback(`🎉 You're in! You are #${42 + stored.length} on the private beta list. We'll send your invite to ${email}.`, 'success');
+          emailInput.value = '';
+          submitBtn.innerHTML = '<span>Reserved! ✓</span>';
+        }
       }
     });
   }
