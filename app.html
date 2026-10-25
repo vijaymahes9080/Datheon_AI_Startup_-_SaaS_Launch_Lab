@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposal Risk Scanner & Dashboard — DealForge AI</title>
+  <meta name="description" content="Audit client proposals in 60 seconds, calculate financial bleed, and generate drop-in protective clauses.">
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/app.css">
+</head>
+<body>
+  <div class="bg-ambient"></div>
+
+  <div class="app-layout">
+    <!-- Navbar -->
+    <header class="app-navbar">
+      <div style="display:flex; align-items:center; gap:1.5rem;">
+        <a href="index.html" style="display:flex; align-items:center; gap:0.5rem; text-decoration:none; color:#fff; font-weight:800; font-size:1.15rem;">
+          <div style="width:28px; height:28px; background:var(--brand-primary); border-radius:6px; display:flex; align-items:center; justify-content:center; color:#070b14; font-size:0.9rem;">⚡</div>
+          <span>DealForge AI</span>
+        </a>
+        <span class="plan-badge plan-pro" id="user-plan-badge">Agency Pro Plan</span>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:1rem;">
+        <div id="user-info-display" style="font-size:0.85rem; color:var(--text-secondary);">
+          <span id="user-agency-name">Apex Digital Studio</span> • <span id="user-email-display">founder@apexstudio.io</span>
+        </div>
+        <a href="checkout.html?plan=pro" class="btn-primary" id="btn-upgrade-nav" style="padding:0.4rem 0.9rem; font-size:0.8rem;">
+          Upgrade Tier
+        </a>
+        <button id="btn-logout" class="btn-secondary" style="padding:0.4rem 0.8rem; font-size:0.8rem;">
+          Sign Out
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="app-main">
+      <!-- KPI Stats -->
+      <section class="kpi-row">
+        <div class="kpi-card glass-panel">
+          <div class="kpi-label">Proposals Audited</div>
+          <div class="kpi-value" id="kpi-total-audits">14</div>
+          <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.25rem;">+4 this week</div>
+        </div>
+        <div class="kpi-card glass-panel">
+          <div class="kpi-label">Average Risk Score</div>
+          <div class="kpi-value" style="color:#f59e0b;" id="kpi-avg-risk">64/100</div>
+          <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.25rem;">Moderate agency exposure</div>
+        </div>
+        <div class="kpi-card glass-panel">
+          <div class="kpi-label">Estimated Margin Protected</div>
+          <div class="kpi-value" style="color:#10b981;" id="kpi-margin-saved">$38,500</div>
+          <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.25rem;">In unbilled hours averted</div>
+        </div>
+        <div class="kpi-card glass-panel">
+          <div class="kpi-label">Active Plan Quota</div>
+          <div class="kpi-value" style="color:var(--text-primary); font-size:1.4rem;" id="kpi-quota">Unlimited Scans</div>
+          <div style="font-size:0.75rem; color:#10b981; margin-top:0.25rem;">Stripe Test Verified ✓</div>
+        </div>
+      </section>
+
+      <!-- Proposal Scanner Workspace -->
+      <section class="workspace-grid">
+        <!-- Editor Left Column -->
+        <div class="editor-card glass-panel">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h2 style="font-size:1.15rem; font-weight:700;">Proposal & SOW Risk Scanner</h2>
+            <div class="quick-templates">
+              <span class="template-chip" id="chip-sample-web">Sample: Web Dev SOW</span>
+              <span class="template-chip" id="chip-sample-cloud">Sample: Cloud SLA SOW</span>
+              <span class="template-chip" id="chip-clear">Clear</span>
+            </div>
+          </div>
+
+          <div>
+            <label class="form-label" for="proposal-title">Engagement Title / Client Name</label>
+            <input type="text" id="proposal-title" class="form-input" placeholder="e.g. Acme Corp — Enterprise Portal Statement of Work" value="Acme Corp — Next.js Enterprise Portal SOW" />
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+            <div>
+              <label class="form-label" for="deal-value">Contract Value ($ USD)</label>
+              <input type="number" id="deal-value" class="form-input" placeholder="50000" value="75000" />
+            </div>
+            <div>
+              <label class="form-label" for="contract-type">Billing Model</label>
+              <select id="contract-type" class="form-input">
+                <option value="fixed">Fixed-Price Milestone</option>
+                <option value="hybrid">Capped Time & Materials</option>
+                <option value="retainer">Monthly Dedicated Retainer</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="form-label" for="proposal-text">Statement of Work (SOW) or Contract Proposal Text</label>
+            <textarea id="proposal-text" class="editor-textarea" placeholder="Paste your proposal clauses, milestone criteria, or statement of work text here..."></textarea>
+          </div>
+
+          <button id="btn-run-audit" class="btn-primary" style="justify-content:center; padding:0.85rem; font-size:1rem; width:100%;">
+            <span>⚡ Run Deep Risk Audit (60s)</span>
+          </button>
+        </div>
+
+        <!-- Results Right Column -->
+        <div class="results-card glass-panel" id="results-panel">
+          <div id="results-placeholder" style="text-align:center; padding:5rem 2rem; color:var(--text-muted);">
+            <div style="font-size:3rem; margin-bottom:1rem;">🔍</div>
+            <h3 style="font-size:1.2rem; font-weight:700; color:var(--text-primary); margin-bottom:0.5rem;">Ready to Audit Your Proposal</h3>
+            <p style="font-size:0.9rem; max-width:340px; margin:0 auto;">
+              Paste your draft agreement or click a sample template on the left to run our 50-point agency risk engine.
+            </p>
+          </div>
+
+          <div id="results-content" style="display:none;">
+            <!-- Score Banner -->
+            <div class="score-banner score-banner-critical" id="score-banner">
+              <div>
+                <div style="font-size:0.8rem; text-transform:uppercase; font-weight:700; letter-spacing:0.05em;" id="risk-level-tag">HIGH MARGIN EXPOSURE</div>
+                <div style="font-size:1.8rem; font-weight:900;" id="risk-score-display">76 / 100</div>
+              </div>
+              <div style="text-align:right;">
+                <div style="font-size:0.8rem; color:var(--text-muted);">Estimated Dollar-at-Risk</div>
+                <div style="font-size:1.4rem; font-weight:800; color:#ef4444;" id="margin-bleed-display">$28,500</div>
+              </div>
+            </div>
+
+            <!-- Issues List -->
+            <h3 style="font-size:1rem; font-weight:700; margin-bottom:1rem; display:flex; justify-content:space-between; align-items:center;">
+              <span>Detected Vulnerabilities & Protective Amendments</span>
+              <span id="issues-count-badge" style="background:rgba(239,68,68,0.2); color:#ef4444; font-size:0.75rem; padding:0.2rem 0.5rem; border-radius:9999px;">4 Found</span>
+            </h3>
+
+            <div id="issues-list-container">
+              <!-- Dynamically populated issue cards -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>

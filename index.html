@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DealForge AI — Proposal Risk Scanner & Margin Protection for Agencies</title>
+  <meta name="description" content="Audit client proposals in 60s. Eliminate scope creep, protect 40%+ margins, and detect dangerous contract clauses before client signature.">
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/landing.css">
+</head>
+<body>
+  <div class="bg-ambient"></div>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="./" class="brand-logo" id="nav-brand-logo">
+        <div class="brand-icon">⚡</div>
+        <span>DealForge AI</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#problem" class="nav-link" id="nav-link-problem">Why DealForge</a>
+        <a href="#how-it-works" class="nav-link" id="nav-link-features">How It Works</a>
+        <a href="#pricing" class="nav-link" id="nav-link-pricing">Pricing</a>
+        <a href="#faq" class="nav-link" id="nav-link-faq">FAQ</a>
+        <a href="app.html" class="btn-primary" id="btn-launch-demo">Try Live Scanner →</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero-section">
+      <div class="badge-pill" id="badge-hero">
+        <span>⚡ Private Beta Cohort Open (50 Agency Limit)</span>
+      </div>
+      <h1 class="hero-title" id="hero-heading">
+        Stop Bleeding 30% Margin on<br>Fixed-Fee Client Proposals
+      </h1>
+      <p class="hero-subtitle" id="hero-subtext">
+        Audit Statements of Work in 60 seconds. Detect scope creep traps, unbilled revision cycles, and ambiguous acceptance criteria before you sign.
+      </p>
+
+      <!-- Waitlist Signup Form -->
+      <div class="waitlist-container">
+        <form class="waitlist-form" id="waitlist-form">
+          <input 
+            type="email" 
+            class="waitlist-input" 
+            id="waitlist-email" 
+            placeholder="Enter your work email (e.g., alex@agency.com)" 
+            required 
+            aria-label="Work Email Address"
+          />
+          <button type="submit" class="btn-primary" id="btn-submit-waitlist">
+            <span>Get Priority Access</span>
+            <span>→</span>
+          </button>
+        </form>
+        <div class="consent-row">
+          <input type="checkbox" id="consent-checkbox" required checked />
+          <label for="consent-checkbox">
+            Zero PII storage. We never train public AI models on your proposals.
+          </label>
+        </div>
+        <div id="waitlist-feedback" class="waitlist-feedback" style="display:none; margin-top:0.75rem; font-size:0.9rem;"></div>
+      </div>
+
+      <!-- Live Teardown Preview Card -->
+      <div class="preview-card glass-panel" id="preview-teardown">
+        <div class="preview-header">
+          <div class="window-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <span style="font-size:0.85rem; color:var(--text-muted); font-family:var(--font-mono);">audit_sample_sow_v2.docx (Scan Time: 1.2s)</span>
+          <span style="font-size:0.8rem; background:rgba(239,68,68,0.2); color:#ef4444; padding:0.2rem 0.6rem; border-radius:4px; font-weight:700;">
+            Risk Score: 78/100 (HIGH MARGIN RISK)
+          </span>
+        </div>
+        <div class="preview-body">
+          <div class="clause-box">
+            <span class="clause-tag tag-danger">❌ Flagged Clause (Margin Bleed Trap)</span>
+            <p class="clause-text">
+              "The Agency shall deliver the mobile portal within 90 days. Final payment of $25,000 shall be issued upon 
+              <span class="highlight-danger">Client's complete satisfaction and unrestricted approval</span> of all functionality, including 
+              <span class="highlight-danger">any modifications deemed reasonable</span> by the steering committee."
+            </p>
+            <div style="margin-top:0.75rem; font-size:0.8rem; color:#fca5a5;">
+              ⚠️ <strong>Calculated Exposure</strong>: Subjective acceptance criteria creates an estimated 65-day payment freeze risk ($25,000 cash flow hold).
+            </div>
+          </div>
+          <div class="clause-box">
+            <span class="clause-tag tag-safe">✅ DealForge Recommended Drop-in Clause</span>
+            <p class="clause-text">
+              "Final payment of $25,000 shall become due upon delivery against the mutually agreed Feature Matrix (Exhibit A). 
+              <span class="highlight-safe">Client shall have five (5) business days to submit written itemized defects</span>. In the absence of written notice within 5 business days, 
+              <span class="highlight-safe">deliverables are deemed accepted and payable within 10 days</span>."
+            </p>
+            <div style="margin-top:0.75rem; font-size:0.8rem; color:#86efac;">
+              🛡️ <strong>Protection Secured</strong>: Objective 5-day deemed acceptance clause eliminates unbilled rework and cash flow hold.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem-Solution Narrative Section -->
+    <section class="problem-solution-section" id="problem" style="padding:4rem 1.5rem; text-align:center;">
+      <h2 style="font-size:2.4rem; font-weight:800; margin-bottom:1rem;">
+        Why Fixed-Fee Contracts Bleed Agency Profits
+      </h2>
+      <p style="color:var(--text-secondary); max-width:650px; margin:0 auto 3rem;">
+        Agencies write off an average of $35,000 per year not because they cannot build, but because sales proposals contain hidden contractual loopholes.
+      </p>
+
+      <div class="grid-3">
+        <div class="feature-card glass-panel">
+          <div class="feature-icon">⏳</div>
+          <h3 class="feature-title">The 47-Day Milestone Freeze</h3>
+          <p class="feature-desc">
+            Vague clauses like "to client satisfaction" allow enterprise procurement to delay your final 20% invoice while demanding free out-of-scope micro-features.
+          </p>
+        </div>
+        <div class="feature-card glass-panel">
+          <div class="feature-icon">🔄</div>
+          <h3 class="feature-title">The Unlimited Revision Trap</h3>
+          <p class="feature-desc">
+            Failing to define explicit round limits and client turnaround windows leads to 12 revision rounds on what was priced as a 2-week sprint.
+          </p>
+        </div>
+        <div class="feature-card glass-panel">
+          <div class="feature-icon">⚖️</div>
+          <h3 class="feature-title">Uncapped Indemnity Traps</h3>
+          <p class="feature-desc">
+            Client-mandated paper contracts often slip in uncapped consequential damage liability that could wipe out your entire annual company margin.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" style="padding:4rem 1.5rem; background:rgba(13,21,39,0.5); text-align:center;">
+      <h2 style="font-size:2.4rem; font-weight:800; margin-bottom:1rem;">
+        From Draft to Watertight in 60 Seconds
+      </h2>
+      <p style="color:var(--text-secondary); max-width:600px; margin:0 auto 3rem;">
+        Three simple steps to protect your margins before sending any client SOW.
+      </p>
+
+      <div class="grid-3">
+        <div class="feature-card glass-panel">
+          <div style="font-weight:900; color:var(--brand-primary); font-size:1.5rem; margin-bottom:0.5rem;">01</div>
+          <h3 class="feature-title">Paste or Upload SOW</h3>
+          <p class="feature-desc">
+            Paste your proposal text or upload PDF/Word files. Our zero-retention preprocessor scrubs client PII locally before analysis.
+          </p>
+        </div>
+        <div class="feature-card glass-panel">
+          <div style="font-weight:900; color:var(--brand-primary); font-size:1.5rem; margin-bottom:0.5rem;">02</div>
+          <h3 class="feature-title">Instant Risk Audit</h3>
+          <p class="feature-desc">
+            Our 50-point agency risk engine scans for ambiguous acceptance, milestone vulnerabilities, uncapped revisions, and liability traps.
+          </p>
+        </div>
+        <div class="feature-card glass-panel">
+          <div style="font-weight:900; color:var(--brand-primary); font-size:1.5rem; margin-bottom:0.5rem;">03</div>
+          <h3 class="feature-title">Copy Protective Clauses</h3>
+          <p class="feature-desc">
+            Get instant, one-click copyable amendment language vetted by top agency legal advisors to replace dangerous clauses.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section (Loaded with 3-Tier Offer) -->
+    <section id="pricing" style="padding:5rem 1.5rem; text-align:center;">
+      <div class="badge-pill">Transparent Pricing</div>
+      <h2 style="font-size:2.4rem; font-weight:800; margin-bottom:1rem;">
+        Protect $35,000+ in Agency Margins
+      </h2>
+      <p style="color:var(--text-secondary); max-width:600px; margin:0 auto 3rem;">
+        Preventing a single unbilled scope dispute pays for DealForge for years.
+      </p>
+
+      <div class="grid-3" style="max-width:1150px; margin:0 auto;">
+        <!-- Free Tier -->
+        <div class="feature-card glass-panel" style="display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <span style="font-size:0.85rem; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Starter</span>
+            <h3 style="font-size:2rem; font-weight:800; margin:0.5rem 0 1rem;">Free</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:1.5rem;">Perfect for solo consultants and boutique studios testing their first SOWs.</p>
+            <ul style="text-align:left; list-style:none; line-height:2; font-size:0.9rem; color:var(--text-secondary);">
+              <li>✓ 2 Proposal Audits / month</li>
+              <li>✓ Standard Risk Score (0-100)</li>
+              <li>✓ Top 3 Flagged Vulnerabilities</li>
+              <li>✓ Basic Clause Amendments</li>
+            </ul>
+          </div>
+          <a href="app.html" class="btn-secondary" style="width:100%; justify-content:center; margin-top:2rem;">Start Free Audit</a>
+        </div>
+
+        <!-- Pro Tier (Featured) -->
+        <div class="feature-card glass-panel" style="border-color:var(--brand-primary); box-shadow:var(--shadow-glow); display:flex; flex-direction:column; justify-content:space-between; position:relative;">
+          <div style="position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:var(--brand-primary); color:#070b14; font-size:0.75rem; font-weight:800; padding:0.25rem 0.75rem; border-radius:9999px;">
+            MOST POPULAR FOR AGENCIES
+          </div>
+          <div>
+            <span style="font-size:0.85rem; font-weight:700; color:var(--brand-primary); text-transform:uppercase;">Agency Pro</span>
+            <h3 style="font-size:2rem; font-weight:800; margin:0.5rem 0 1rem;">$79 <span style="font-size:1rem; font-weight:500; color:var(--text-muted);">/ month</span></h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:1.5rem;">For growing agencies running 3+ proposals and statements of work every month.</p>
+            <ul style="text-align:left; list-style:none; line-height:2; font-size:0.9rem; color:var(--text-primary);">
+              <li>✓ <strong>Unlimited</strong> Proposal Audits</li>
+              <li>✓ <strong>Dollar-at-Risk</strong> Margin Calculator</li>
+              <li>✓ Complete 50-Point Clause Redline Engine</li>
+              <li>✓ Exportable Client PDF & Audit Reports</li>
+              <li>✓ Custom Agency Clause Library</li>
+              <li>✓ Up to 5 Team Seats</li>
+            </ul>
+          </div>
+          <a href="checkout.html?plan=pro" class="btn-primary" style="width:100%; justify-content:center; margin-top:2rem;">Upgrade to Pro →</a>
+        </div>
+
+        <!-- Lifetime Tier -->
+        <div class="feature-card glass-panel" style="display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <span style="font-size:0.85rem; font-weight:700; color:#f59e0b; text-transform:uppercase;">Founder Lifetime</span>
+            <h3 style="font-size:2rem; font-weight:800; margin:0.5rem 0 1rem;">$499 <span style="font-size:0.9rem; font-weight:500; color:var(--text-muted);">one-time</span></h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:1.5rem;">Limited Founder cohort (50 licenses). Pay once, protect your agency forever.</p>
+            <ul style="text-align:left; list-style:none; line-height:2; font-size:0.9rem; color:var(--text-secondary);">
+              <li>✓ <strong>Lifetime Pro Access</strong> (3 Years Guaranteed)</li>
+              <li>✓ All Future Pro Features Included</li>
+              <li>✓ 1-on-1 Onboarding Contract Audit Call</li>
+              <li>✓ Founder VIP Support Channel</li>
+              <li>✓ Capped at First 50 Buyers</li>
+            </ul>
+          </div>
+          <a href="checkout.html?plan=lifetime" class="btn-secondary" style="width:100%; justify-content:center; margin-top:2rem; border-color:#f59e0b; color:#fbbf24;">Claim Lifetime License</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" style="padding:4rem 1.5rem; max-width:850px; margin:0 auto; text-align:left;">
+      <h2 style="font-size:2.2rem; font-weight:800; text-align:center; margin-bottom:2.5rem;">
+        Frequently Asked Questions
+      </h2>
+
+      <div style="display:flex; flex-direction:column; gap:1.25rem;">
+        <div class="glass-panel" style="padding:1.5rem;">
+          <h3 style="font-size:1.1rem; font-weight:700; margin-bottom:0.5rem;">Does DealForge AI provide formal legal advice?</h3>
+          <p style="color:var(--text-secondary); font-size:0.92rem;">
+            No. DealForge AI is an operational risk intelligence tool designed by agency founders and commercial delivery directors. It flags contractual patterns historically associated with scope creep, late payments, and dispute write-offs. It is not a substitute for licensed legal counsel.
+          </p>
+        </div>
+
+        <div class="glass-panel" style="padding:1.5rem;">
+          <h3 style="font-size:1.1rem; font-weight:700; margin-bottom:0.5rem;">What happens to our confidential client proposal data?</h3>
+          <p style="color:var(--text-secondary); font-size:0.92rem;">
+            We operate a strict Zero-Data-Retention policy. We scrub sensitive client identifiers locally and do not use your proprietary proposals or client pricing to train any public AI models.
+          </p>
+        </div>
+
+        <div class="glass-panel" style="padding:1.5rem;">
+          <h3 style="font-size:1.1rem; font-weight:700; margin-bottom:0.5rem;">How does the 60-second scan work?</h3>
+          <p style="color:var(--text-secondary); font-size:0.92rem;">
+            Our hybrid engine runs 50+ deterministic pattern checks (identifying unlimited revisions, subjective acceptance criteria, delayed payment terms, and unbudgeted SLA liabilities) paired with semantic classification to provide actionable drop-in clauses in real time.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer style="border-top:1px solid var(--border-subtle); padding:3rem 1.5rem; text-align:center; color:var(--text-muted); font-size:0.85rem;">
+    <div style="max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+      <div style="display:flex; align-items:center; gap:0.5rem; font-weight:700; color:var(--text-primary);">
+        <span>⚡ DealForge AI</span>
+        <span>— Built for Agency Founders</span>
+      </div>
+      <div>
+        © 2026 DealForge AI Technologies. All rights reserved. Strict Privacy & Zero PII Retention.
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/landing.js"></script>
+</body>
+</html>
