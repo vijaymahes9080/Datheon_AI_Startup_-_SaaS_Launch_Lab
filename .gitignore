@@ -14,6 +14,7 @@ node_modules/
 *.sqlite
 *.sqlite3
 *.db
+data/
 data/*.sqlite
 data/*.db
 
