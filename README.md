@@ -3,6 +3,7 @@
 # DealForge AI — Proposal Risk Scanner & Margin Protection Copilot
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-10b981.svg?logo=github&logoColor=white)](https://vijaymahes9080.github.io/Datheon_AI_Startup_-_SaaS_Launch_Lab/)
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933.svg?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Tests](https://img.shields.io/badge/Tests-15%2F15%20Passing-success.svg)](tests/)
 [![Security](https://img.shields.io/badge/Security-OWASP%20Top%2010%20Verified-blueviolet.svg)](docs/09_architecture_contracts.md)
@@ -15,7 +16,7 @@
 ### *Protect Your Agency's Margins Before You Sign.*
 **An automated contract heuristic audit engine that detects scope creep, uncapped revisions, and subjective approval traps in under 60 seconds.**
 
-[Live Demo](#-interactive-mvp-demo) • [System Architecture](#-system-architecture) • [LinkedIn Launch Kit](docs/linkedin.md) • [Validation Evidence](#-evidence-register--documentation) • [Quickstart](#-quickstart--installation)
+[🌐 Live GitHub Pages Demo](https://vijaymahes9080.github.io/Datheon_AI_Startup_-_SaaS_Launch_Lab/) • [System Architecture](#-system-architecture) • [LinkedIn Launch Kit](docs/linkedin.md) • [Validation Evidence](#-evidence-register--documentation) • [Quickstart](#-quickstart--installation)
 
 </div>
 
