@@ -1,7 +1,7 @@
 # Document 01: Opportunity Matrix & Niche Validation
 
 ## 1. Executive Summary
-This document executes Stage 1.1 of the CO-STAR V3 Startup Builder protocol. We evaluate three distinct B2B SaaS / AI product opportunities to select a high-margin, commercially defensible, and testable venture.
+This document executes Stage 1.1 of the CO-STAR Startup Builder protocol. We evaluate three distinct B2B SaaS / AI product opportunities to select a high-margin, commercially defensible, and testable venture.
 
 ---
 

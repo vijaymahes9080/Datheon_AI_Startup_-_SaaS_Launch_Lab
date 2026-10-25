@@ -1,6 +1,6 @@
 # DealForge AI — Proposal Risk Scanner & Margin Protection Copilot
 
-> **CO-STAR V3 — Elite Startup Builder & Market Validation Engine**
+> **CO-STAR — Elite Startup Builder & Market Validation Engine**
 > *Discover → Validate → Design → Build → Monetize → Launch → Measure*
 
 ---
